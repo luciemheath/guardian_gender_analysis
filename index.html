@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link href="/static/style.css" rel="stylesheet">
+ <link href="/static/bootstrap.css" rel="stylesheet">
+  <title>Guardian Gender Analysis</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/bootstrap.min.js"></script>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<!-- Intro text -->
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-12 text-center">
+    <img src="/static/newspaper-woman.gif" alt="Newspaper woman">
+    <h1 class="mt-5">Gender in the media: 10 years of the Guardian</h1>
+    <p class="lead">How well are women represented in the bylines of one of the UK’s biggest papers? </p>
+    <p class="text-capitalize">by Lucie Heath</p>
+  </div>
+  </div>
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="col">
+    </div>
+    <div class="col-7">
+    <p>2017 was quite the year for women in the media.
+    Fuelled by the Harvey Weinstein scandal that shook Holywood to its core in early October,
+    the international press suddenly began devoting an unprecedented level of column inches to reports of sexual harassment
+    and abuses of power along gender lines.
+    </p>
+    <p>Since October, the aftershocks of the Weinstein scandal have been felt across industry and continent.
+    Here in the UK, many female journalists were encouraged to speak out about the harassment
+    and discrimination they experience at work. Evening Standard columnist Ros Urwin went as far as to set up an organisation called The Second Source,
+    the aim of which is to provide support to women in an industry still seen as being dominated by men.</p>
+    <p>So what is it really like to be a woman in the British media in 2018?
+    Are female journalists truly as underrepresented as many believe them to be and how have things changed in recent years?
+    This article will attempt to contribute to these questions by analysing the gender of ten years of online bylines from
+    one of the biggest newspapers in the country, the Guardian.
+    </p>
+  </div>
+  <div class="col">
+    </div>
+  </div>
+  </div>
+
+<!-- Data -->
+  <div class="container">
+  <div class="row">
+  <div class="col"></div>
+  <div class="col-9 text-center">
+  <div class="svg">
+    <br>
+    <h4>The Data</h4>
+    <p class="lead">Number of male and female bylines in the Guardian, 2008-2017</p>
+    <div class= "selector">
+      <select id="selector">
+        <option value="year">By Year</option>
+        <option value="section">By Section</option>
+      </select>
+    </div>
+
+    <div class= "selector2"></div>
+
+    <svg width="800" height="500" align="center"></svg>
+    </div>
+    </div>
+    <div class="col"></div>
+  </div>
+  </div>
+
+  <!-- Findings -->
+  <div class="container">
+  <div class="row">
+  <div class="col">
+    </div>
+    <div class="col-7">
+    <h4>Findings</h4>
+    <p>A first glance at the data would perhaps prove disappointing for those who champion equality between the sexes.
+    Since 2008 women have consistently received far less bylines than men on the Guardian website, ranging from a low of
+    28 percent in 2010 and 2011, to a peak of 36 percent last year. Clearly disproportionate in a country where just over
+    50 percent of the population are women. </p>
+    <p>By delving into the byline data by section, we can see that one explanation for this disproportionality could be the
+    lack of female bylines in the sport and football sections. Each year sport and football are consistently in the top four
+    most written about sections of the Guardian website, yet women rarely make up as much as ten percent of authors. In 2016,
+    for example, sport was the single most written about subject by the Guardian online, yet only five percent of article contributors
+    were women. An interesting next step would be to analyse the data without the sport and football sections, to see how that
+    impacted the overall gender balance. </p>
+    <p>In saying that, there are few sections where women repeatedly make close to 50 percent of contributors. When analysing
+    the data as a whole there are only two sections in the last ten years where women are writing more than men; life and style
+    and money. Women are also well represented in the books, stage and society sections but less so in technology and film.
+    </p>
+    <p>While the data clearly shows that women are currently underrepresented in the bylines of the Guardian online,
+    we can also view a trend towards equality. Since 2011, the percentage of female bylines has consistently risen each year,
+    improving by ? points in a six year period. In fact, a quicky analysis of these results using a linear regression mode
+    l would suggest that gender equality within the Guardian bylines will be reached by 2030.
+    </p>
+    </div>
+  <div class="col">
+    </div>
+  </div>
+  </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-7">
+    <h4>Methodology</h4>
+    <p>Data was downloaded about all online Guardian articles, including section name and byline, from the Guardian API.
+    The Guardian was chosen largely due to the ease of accessing this information but also because it is one of the most
+    read online newspapers in the country. </p>
+    <p>The data downloaded from the Guardian was then compared to a database of male and female names that can be found here.
+    This database accounts for the genderless nature of certain names by assigning a probability rating as to whether a name
+    is more likely to be male or female. However, as this list is based on the US rather than UK, a small proportion of names
+    may be incorrectly assigned. </p>
+    <p>Important to note is that the above data illustrates the number of authors, rather than the number of articles.
+    If an article has more than one author in the bylines, which is a common occurrence,  then it will be counted multiple times.
+    This data does therefore not provide information about the amount of articles being produced by the Guardian and shouldn’t be
+    used to do so. </p>
+    <p>The above chart also omits the number of authors categorised as unknown. Unknown authors can mean an article that does not
+    have a byline or an article that was written by a generic author such as ‘The Guardian.’ Obviously it could also mean that the
+    author’s name did not appear in the chosen database. </p>
+    <p>A full copy of code, data and credits can be found on Github. </p>
+    </div>
+  <div class="col">
+    </div>
+  </div>
+  </div>
+
+  <script src="static/scripts.js"></script>
+</body>
+</html>

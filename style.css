@@ -1,0 +1,10 @@
+rect:hover{
+  fill: #f4decb;
+}
+.selector{
+  margin-top: 10;
+  margin-bottom: 10;
+}
+.svg{
+  border-style: groove;
+}
